@@ -1,4 +1,4 @@
-package mc.toriset.lib;
+package mc.toriset;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
