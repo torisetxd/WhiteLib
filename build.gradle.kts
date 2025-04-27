@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("java-library")
     id("maven-publish")
 }
 
@@ -19,14 +20,14 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
+//    testImplementation(platform("org.junit:junit-bom:5.10.0"))
+//    testImplementation("org.junit.jupiter:junit-jupiter")
     compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
+//tasks.test {
+//    useJUnitPlatform()
+//}
 
 java {
     toolchain {
@@ -37,7 +38,18 @@ java {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
+            groupId = "com.github.torisetxd"
+            artifactId = "WhiteLib"
+            version = project.version.toString()
+
             from(components["java"])
+        }
+    }
+
+    repositories {
+        maven {
+            name = "jitpack"
+            url = uri("https://jitpack.io")
         }
     }
 }
