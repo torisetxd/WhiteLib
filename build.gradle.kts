@@ -22,6 +22,13 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     compileOnly("io.papermc.paper:paper-api:1.20.4-R0.1-SNAPSHOT")
 }
+
 tasks.test {
     useJUnitPlatform()
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
