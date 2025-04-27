@@ -29,11 +29,11 @@ dependencies {
 }
 
 tasks.shadowJar {
-    relocate("com.mongodb", "mc.toriset.lib.mongodb")
-    relocate("org.bson", "mc.toriset.lib.bson")
-    relocate("org.reactivestreams", "mc.toriset.lib.reactivestreams")
-    relocate("reactor", "mc.toriset.lib.reactor")
-    relocate("io.projectreactor", "mc.toriset.lib.projectreactor")
+//    relocate("com.mongodb", "mc.toriset.lib.mongodb")
+//    relocate("org.bson", "mc.toriset.lib.bson")
+//    relocate("org.reactivestreams", "mc.toriset.lib.reactivestreams")
+//    relocate("reactor", "mc.toriset.lib.reactor")
+//    relocate("io.projectreactor", "mc.toriset.lib.projectreactor")
 
     archiveClassifier.set("")
 }
